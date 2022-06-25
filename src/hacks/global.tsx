@@ -89,12 +89,12 @@ withCategory(Category.GLOBAL, ({ hack, toggle }) => {
     hack("Remove Player", "Remove any player even if you are not the host.", async () => {
         const { stateNode } = getReactHandler()
 
-        const _0x35ebc3 = {
+        const cache = {
             "": (_0x4a7e0e, _0x682a94, _0x5de38b) => {
                 _0x682a94.cache = _0x5de38b.c
             }
         }
-        const users = (await Object.values<any>(window.webpackJsonp.push([[], _0x35ebc3, [[""]]]).cache)
+        const users = (await Object.values<any>(window.webpackJsonp.push([[], cache, [[""]]]).cache)
             .find(
                 (_0x39fd82) =>
                     _0x39fd82?.exports?.a?.put
@@ -169,5 +169,25 @@ withCategory(Category.GLOBAL, ({ hack, toggle }) => {
         )
 
         success("Removed player.")
+    })
+    hack("End Game", "End the game.", async () => {
+        const cache = {
+            "": (_0x2a89db, _0x148f59, _0x158810) => {
+                _0x148f59.cache = _0x158810.c
+            }
+        }
+        Object.values<any>(window.webpackJsonp.push([[], cache, [[""]]]).cache)
+            .find(
+                (value) =>
+                    value.exports &&
+                value.exports.c &&
+                value.exports.c.prototype.removeHost &&
+                value.exports.c.prototype.removeHost
+            )
+            .exports.c.prototype.removeHost(
+                JSON.parse(Object.values(sessionStorage)[0]).uid.split(":")[0]
+            )
+
+        success("The game has been ended.")
     })
 })
