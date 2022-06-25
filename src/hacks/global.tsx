@@ -1,5 +1,5 @@
 import { success, InputTypes, error } from "../swal"
-import { encodeValues, getBlooks, getName, getReactHandler, getValues, inGame, inLobby, sellBlook } from "../utils/hackHelperFunctions"
+import { encodeValues, getBlooks, getName, getReactHandler, getValues, inLobby, sellBlook } from "../utils/hackHelperFunctions"
 import { Category } from "./base/categories"
 import { withCategory } from "./base/registry"
 
@@ -120,7 +120,7 @@ withCategory(Category.GLOBAL, ({ hack, toggle }) => {
             )
         }
 
-        if (inGame("dino")) {
+        if (stateNode.state.player) {
             stateNode.state.userToBlock = selectedUser
             let players = JSON.parse(JSON.stringify(stateNode.state.players))
             const playerIndex = players
