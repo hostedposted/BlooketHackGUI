@@ -24,7 +24,6 @@ jobs:
       run: |
         npm ci
         npm run build
-        npm run build-extension
     - name: Commit files
       run: |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
