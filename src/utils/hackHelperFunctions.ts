@@ -53,4 +53,4 @@ export const inLobby = () => document.location.pathname.split("/").includes("lob
 
 export const inGame = (game: "dino" | "gold" | "hack" | "fish" | "rush" | "royale" | "defense" | "cafe" | "factory" | "racing" | "classic") => document.location.pathname.split("/").includes(game)
 
-export const getReactHandler = () => Object.values(document.querySelector("#app > div > div"))[1].children[1]._owner
+export const getReactHandler = <T = any, >(): { stateNode: T, [key: string]: any } => Object.values(document.querySelector("#app > div > div"))[1].children[1]._owner

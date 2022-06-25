@@ -1,5 +1,6 @@
 export enum Category {
-    GLOBAL = "Global Hacks"
+    GLOBAL = "Global Hacks",
+    CAFE = "Cafe Hacks",
 }
 
 export const sortGroups = (groups: [Category, HackData[]][]): [Category, HackData[]][] => {
