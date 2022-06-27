@@ -6,7 +6,7 @@ import { withCategory } from "./base/registry"
 withCategory(Category.GLOBAL, ({ hack, toggle }) => {
     hack("Add Tokens", "Add any amount of tokens from 0 to 500.", async () => {
         const { blooketBuild, secret } = getValues()
-        const name = getName()
+        const name = await getName()
 
         await fetch("https://api.blooket.com/api/users/add-rewards", {
             method: "PUT",
