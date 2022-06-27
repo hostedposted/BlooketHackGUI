@@ -11,7 +11,7 @@ const MenuToggler: FunctionalComponent<MenuTogglerProps> = ({ toggled, onToggle 
     const Icon = toggled ? BsArrowUp : BsArrowDown
 
     return (
-        <button className="bg-gray-200 bg-opacity-90 absolute z-10" onClick={onToggle} id="menu-toggler">
+        <button className="bg-gray-200 bg-opacity-90 absolute z-[110]" onClick={onToggle} id="menu-toggler">
             <IconContext.Provider value={{ size: "30px", color: "black" }}>
                 <Icon />
             </IconContext.Provider>
