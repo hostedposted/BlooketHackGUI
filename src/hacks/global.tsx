@@ -12,7 +12,7 @@ withCategory(Category.GLOBAL, ({ hack, toggle }) => {
             method: "PUT",
             credentials: "include",
             body: await encodeValues({
-                addedTokens: await InputTypes.integer("Enter the amount of tokens to add.", 0, 500),
+                addedTokens: await InputTypes.integer("Enter the amount of tokens to add.", 0, 499),
                 addedXp: await InputTypes.integer("Enter the amount of XP to add.", 0, 300),
                 name
             }, secret),
